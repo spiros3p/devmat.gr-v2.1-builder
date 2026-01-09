@@ -22,9 +22,6 @@
     "local:dangerously-undo-version-snapshot": "git restore --source=$(git branch --show-current) '**/*/package.json'",
     "local:release": "pnpm build && pnpm dts && pnpm local:version-snapshot && pnpm local:publish-snapshot && pnpm local:dangerously-undo-version-snapshot && echo \"now execute\npnpm up -r -L '@webstudio-is/*' --registry http://localhost:4873\""
   },
-  "simple-git-hooks": {
-    "pre-commit": "./node_modules/.bin/nano-staged"
-  },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
     "@fontsource-variable/inter": "^5.0.20",
